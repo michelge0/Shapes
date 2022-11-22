@@ -20,8 +20,7 @@ public abstract class Level
 	 *	STATIC FIELDS AND METHODS
 	 *********************************/
 	
-	static Image startScreen, endScreen, credits1, credits2,
-					credits3, credits4, credits5, credits6, currentCreditScreen;
+	public static Image startScreen, endScreen, credits1, credits2, credits3, credits4, credits5, credits6, currentCreditScreen;
 	
 	public static Level currentLevel;
 	public static SpawnPoint currentSpawn;
@@ -120,30 +119,31 @@ public abstract class Level
 	
 	public static void initializeImages() {
 		try {
-	        startScreen = ImageIO.read(new File("resources\\Title Screen.png"));
-        } catch (IOException e) { e.printStackTrace(); }
-		try {
-			endScreen = ImageIO.read(new File("resources\\End Screen.png"));
-		} catch (IOException e) { e.printStackTrace(); }
-		try {
-			credits1 = ImageIO.read(new File("resources\\Credits 1.png"));
-		} catch (IOException e) { e.printStackTrace(); }
-		try {
-			credits2 = ImageIO.read(new File("resources\\Credits 2.png"));
-		} catch (IOException e) { e.printStackTrace(); }
-		try {
-			credits3 = ImageIO.read(new File("resources\\Credits 3.png"));
-		} catch (IOException e) { e.printStackTrace(); }
-		try {
-			credits4 = ImageIO.read(new File("resources\\Credits 4.png"));
-		} catch (IOException e) { e.printStackTrace(); }
-		try {
-			credits5 = ImageIO.read(new File("resources\\Credits 5.png"));
-		} catch (IOException e) { e.printStackTrace(); }
-		try {
-			credits6 = ImageIO.read(new File("resources\\Credits 6.png"));
-		} catch (IOException e) { e.printStackTrace(); }		
+				startScreen = ImageIO.read(Level.class.getResource("/resources/Title Screen.png"));
+			  } catch (IOException e) { e.printStackTrace(); }
+			try {
+				endScreen = ImageIO.read(Level.class.getResource("/resources/End Screen.png"));
+			} catch (IOException e) { e.printStackTrace(); }
+			try {
+				credits1 = ImageIO.read(Level.class.getResource("/resources/Credits 1.png"));
+			} catch (IOException e) { e.printStackTrace(); }
+			try {
+				credits2 = ImageIO.read(Level.class.getResource("/resources/Credits 2.png"));
+			} catch (IOException e) { e.printStackTrace(); }
+			try {
+				credits3 = ImageIO.read(Level.class.getResource("/resources/Credits 3.png"));
+			} catch (IOException e) { e.printStackTrace(); }
+			try {
+				credits4 = ImageIO.read(Level.class.getResource("/resources/Credits 4.png"));
+			} catch (IOException e) { e.printStackTrace(); }
+			try {
+				credits5 = ImageIO.read(Level.class.getResource("/resources/Credits 5.png"));
+			} catch (IOException e) { e.printStackTrace(); }
+			try {
+				credits6 = ImageIO.read(Level.class.getResource("/resources/Credits 6.png"));
+			} catch (IOException e) { e.printStackTrace(); }	
 	}
+
 	
 	/*********************************
 	 * NONSTATIC FIELDS AND METHODS

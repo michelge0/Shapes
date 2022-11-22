@@ -27,9 +27,9 @@ public class Lantern extends Barrier
 		super(room, x, y, width, height);
 		
 		try {
-			highestBrightness = ImageIO.read(new File("Images\\highest brightness.png"));
-			mediumBrightness = ImageIO.read(new File("Images\\medium brightness.png"));
-			lowestBrightness = ImageIO.read(new File("Images\\lowest brightness.png"));
+			highestBrightness = ImageIO.read(getClass().getResource("/resources/highest.png"));
+			mediumBrightness = ImageIO.read(getClass().getResource("/resources/medium.png"));
+			lowestBrightness = ImageIO.read(getClass().getResource("/resources/lowest.png"));
 		} catch (IOException e) {System.out.println("IO Exception");}
 		
 		room.addToWalls(this);

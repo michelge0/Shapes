@@ -62,7 +62,7 @@ public class GUI extends JPanel
 		
 		actionTimer.start();
 		
-		text = new TextArea(105, 468, graphics.getWidth() - 105, graphics.getHeight() - 468);
+		text = new TextArea(105, 510, graphics.getWidth() - 105, graphics.getHeight() - 468);
 		addKeyListener(player);
 	}
 	
